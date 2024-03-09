@@ -98,18 +98,18 @@ Router.get('/search', async (req, res) => {
 
     const sortedByCreationDate = files.sort((a, b) => b.createdAt - a.createdAt);
     const filesWithImageData = await Promise.all(sortedByCreationDate.map(async (file) => {
-      const response = await axios.get(`https://api.telegram.org/bot${process.env.API_TOKEN}/getFile?file_id=${file.fileId}`);
-      const filePath = response.data.result.file_path;
-      const fileUrl = `https://api.telegram.org/file/bot${process.env.API_TOKEN}/${filePath}`;
-      const fileResponse = await axios.get(fileUrl, { responseType: 'arraybuffer' });
-      const data = Buffer.from(fileResponse.data, 'binary').toString('base64');
+      // const response = await axios.get(`https://api.telegram.org/bot${process.env.API_TOKEN}/getFile?file_id=${file.fileId}`);
+      // const filePath = response.data.result.file_path;
+      // const fileUrl = `https://api.telegram.org/file/bot${process.env.API_TOKEN}/${filePath}`;
+      // const fileResponse = await axios.get(fileUrl, { responseType: 'arraybuffer' });
+      // const data = Buffer.from(fileResponse.data, 'binary').toString('base64');
       return {
         _id: file._id,
         title: file.title,
         description: file.description,
         file_name: file.file_name,
         file_mimetype: file.file_mimetype,
-        file_data: data,
+        // file_data: data,
         width: file.width.toString(),
         height: file.height.toString(),
         fileSizeInBytes: file.fileSizeInBytes.toString(),
@@ -199,11 +199,11 @@ Router.get('/getAllFileList', async (req, res) => {
       .limit(limit);
 
     const filesWithImageData = await Promise.all(files.map(async (file) => {
-      const response = await axios.get(`https://api.telegram.org/bot${process.env.API_TOKEN}/getFile?file_id=${file.fileId}`);
-      const filePath = response.data.result.file_path;
-      const fileUrl = `https://api.telegram.org/file/bot${process.env.API_TOKEN}/${filePath}`;
-      const fileResponse = await axios.get(fileUrl, { responseType: 'arraybuffer' });
-      const data = Buffer.from(fileResponse.data, 'binary').toString('base64');
+      // const response = await axios.get(`https://api.telegram.org/bot${process.env.API_TOKEN}/getFile?file_id=${file.fileId}`);
+      // const filePath = response.data.result.file_path;
+      // const fileUrl = `https://api.telegram.org/file/bot${process.env.API_TOKEN}/${filePath}`;
+      // const fileResponse = await axios.get(fileUrl, { responseType: 'arraybuffer' });
+      // const data = Buffer.from(fileResponse.data, 'binary').toString('base64');
       
       
       return {
@@ -212,7 +212,7 @@ Router.get('/getAllFileList', async (req, res) => {
         description: file.description,
         file_name: file.file_name,
         file_mimetype: file.file_mimetype,
-        file_data: data,
+        // file_data: data,
         width: file.width.toString(),
         height: file.height.toString(),
         fileSizeInBytes: file.fileSizeInBytes.toString(),
