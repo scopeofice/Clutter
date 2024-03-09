@@ -13,9 +13,9 @@ const Header = () => {
         <NavLink activeclassname="active" to="/upload">
           Upload
         </NavLink>
-        <NavLink activeclassname="active" to="/list">
+{/*         <NavLink activeclassname="active" to="/list">
           Files List
-        </NavLink>
+        </NavLink> */}
       </nav>
       
     </div>
