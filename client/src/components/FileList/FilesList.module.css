@@ -1,0 +1,116 @@
+/* FilesList.module.css */
+
+.downloadButton,
+.editButton,
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.downloadButton img,
+.deleteButton img,
+.editButton img {
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.downloadButton:hover {
+  background-color: blue;
+}
+
+.deleteButton:hover {
+  background-color: red;
+}
+
+.editButton:hover {
+  background-color: rgb(0, 255, 106);
+}
+
+
+/* FilesList.module.css */
+.filterMenu {
+  display: inline-block;
+  position: relative;
+}
+
+.filterDropdown {
+  display: none;
+  position: absolute;
+  background-color: #4f4f4f;
+  min-width: 220px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.filterDropdown button {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.filterDropdown button:hover {
+  background-color: #000000;
+}
+
+.filterMenu:hover .filterDropdown {
+  display: block;
+}
+
+
+
+
+.saveButton,
+.cancelButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.saveButton img,
+.cancelButton img {
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.saveButton:hover {
+  background-color: rgba(0, 128, 0, 0.705);
+}
+
+.cancelButton:hover {
+  background-color: rgba(255, 0, 0, 0.675);
+}
+
+
+
+
+
+.material-ui-search {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.material-ui-search:focus {
+  outline: none;
+  border-color: #0e7bf1; /* Change border color on focus */
+}
+
+.material-ui-search::placeholder {
+  color: #999; /* Change placeholder color */
+}

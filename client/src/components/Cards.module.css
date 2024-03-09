@@ -1,0 +1,246 @@
+/* .card{
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.card-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'poppins';
+    background-color: #ffffff;
+    color: #555;
+    z-index: 1;
+    transform: translateY(100%);
+    transition: 0.2s ease-in-out;
+}
+
+.card:hover .card-overlay{
+    transform: translateY(0);
+}
+
+.card-header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.5rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: #ffffff;
+    transform: translateY(-100%);
+    transition: 0.2s ease-in-out;
+}
+
+.card-icon{
+    color: #222;
+    margin-left: -20px;
+}
+
+.card-content{
+    display: flex;
+    
+}
+
+.card-content a{
+    transition: 0.3s;
+}
+
+
+
+.card:hover .card-header{
+    transform: translateY(0);
+}
+
+.card-title{
+    font-size: 1rem;
+    font-family: sans-serif;
+    margin-bottom: 12px;
+}
+
+.card-description{
+    font-size: 0.9rem;
+    padding: 0 2rem 2rem;
+    margin: 0;
+    overflow: hidden;
+} */
+
+/* Cards.module.css */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 5px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.176);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+  }
+  
+  .card-overlay:hover {
+    opacity: 1;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+  }
+  
+  .card-content {
+    flex: 1;
+    
+  }
+  
+  .card-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .card-description {
+    margin: 10px;
+  }
+  
+  .card-overlay img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    padding: 5px;
+    margin: 2px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  .card-overlay p {
+    /* width: 30px; */
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    padding: 2px 5px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-overlay img:hover {
+    transform: scale(1.1);
+  }
+  
+  li{
+    margin-bottom: 10px;
+  }
+
+  
+.material-ui-search {
+  /* position: relative; */
+  width: 300px;
+  padding: 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.material-ui-search:focus {
+  outline: none;
+  border-color: #0e7bf1;
+}
+
+.material-ui-search::placeholder {
+  color: #999; 
+}
+
+.material-ui-search-btn {
+ background-color: #0e7bf1; /* Dark blue background */
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  
+  transition: background-color 0.3s ease;
+}
+
+
+
+.material-ui-search-btn:hover {
+  background-color: #085d9e; /* Darker blue on hover */
+}
+
+
+.suggestionsDiv {
+  display: inline-block;
+  position: relative;
+}
+
+.suggestions {
+  display: none;
+  position: absolute;
+  background-color: #4f4f4f;
+  min-width: 220px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+
+
+.suggestions li {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #000000;
+}
+
+.suggestionsDiv:hover .suggestions {
+  display: block;
+}
+
+
