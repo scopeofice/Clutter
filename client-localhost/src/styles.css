@@ -1,0 +1,227 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  letter-spacing: 1px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.main-content {
+  margin-bottom: 20px;
+}
+
+.active {
+  font-weight: 600;
+  color: #0e7bf1;
+}
+
+.errorMsg {
+  color: #f21e08;
+  background: #fff0f0;
+  padding: 1rem;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header nav a {
+  margin: 10px;
+}
+
+.upload-section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.drop-zone {
+  margin-bottom: 10px;
+  padding: 40px 10px;
+  height: 200px;
+  border: 2px dashed #e9ebeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.drop-zone:focus {
+  outline: none;
+}
+
+.image-preview {
+  height: 200px;
+}
+
+.preview-image {
+  width: 100%;
+  height: inherit;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.preview-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.files-container {
+  width: 98%;
+  overflow-x: auto;
+}
+
+.files-table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.files-table tr,
+.files-table td,
+.files-table th {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.files-table .file-title {
+  width: 20%;
+}
+
+
+.files-table .file-description {
+  width: 70%;
+}
+
+.file-input {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.file-textarea {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.file-input:focus, .file-textarea:focus {
+  border-color: #80bdff;
+}
+
+/* If you want to style the textarea to have the same height as the input */
+.file-textarea {
+  min-height: 38px; /* Adjust height as needed */
+}
+
+
+
+.material-ui-input {
+  width: 50vw;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.material-ui-input:focus {
+  outline: none;
+  border-color: #0e7bf1; /* Change border color on focus */
+}
+
+.material-ui-input::placeholder {
+  color: #999; /* Change placeholder color */
+}
+
+.material-ui-input.invalid {
+  border-color: #f21e08; /* Change border color for invalid input */
+}
+
+.material-ui-input.invalid:focus {
+  border-color: #f21e08; /* Change border color for invalid input on focus */
+}
+
+.lottie-container {
+  width: 300px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the animation horizontally */
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  .upload-section {
+    height: auto;
+  }
+
+  .image-preview {
+    margin-left: 0;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  .drop-zone {
+    width: 100%;
+  }
+}
+
+
+  .pagination button{
+    margin-left: 5px;
+  }
+  .pagination button:hover {
+    background-color: #2e2e2e;
+  }
+  
+  /* .pagination button.active {
+    background-color: #007bff !important;
+    color: #fff;
+  } */
+  
+  .pagination button:first-child {
+    margin-left: 0;
+  }
+  
+  .pagination button:last-child {
+    margin-right: 0;
+  }
+  
+
